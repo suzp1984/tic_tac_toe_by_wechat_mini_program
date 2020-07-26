@@ -1,0 +1,76 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.board {
+  margin-top: 20rpx;
+}
+
+.board-row {
+  clear: both;
+  display: table;
+}
+
+.square {
+  width: 120rpx;
+  height: 120rpx;
+  border: 2px solid #999;
+  background-color: #dde0e2;
+  float: left;
+  margin-right: -2px;
+  margin-top: -2px;
+}
+
+.player-x{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-size: 28px;
+}
+
+.player-x:before{
+  content: 'X';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.player-o{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-size: 28px;
+}
+
+.player-o:before{
+  content: 'O';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reset-btn {
+  margin-top: 50rpx;
+}
+
+.game-title {
+  margin-top: 50rpx;
+}

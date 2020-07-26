@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="game-title">{{gameTitle}}</view>
+  <view class="board">
+    <view class="board-row">
+      <view class="square {{squareClasses[0]}}" bindtap="onTap" data-index="0"></view>
+      <view class="square {{squareClasses[1]}}" bindtap="onTap" data-index="1"></view>
+      <view class="square {{squareClasses[2]}}" bindtap="onTap" data-index="2"></view>
+    </view>
+
+    <view class="board-row">
+      <view class="square {{squareClasses[3]}}" bindtap="onTap" data-index="3"></view>
+      <view class="square {{squareClasses[4]}}" bindtap="onTap" data-index="4"></view>
+      <view class="square {{squareClasses[5]}}" bindtap="onTap" data-index="5"></view>
+    </view>
+
+    <view class="board-row">
+      <view class="square {{squareClasses[6]}}" bindtap="onTap" data-index="6"></view>
+      <view class="square {{squareClasses[7]}}" bindtap="onTap" data-index="7"></view>
+      <view class="square {{squareClasses[8]}}" bindtap="onTap" data-index="8"></view>
+    </view>
+  </view>
+
+  <button class="reset-btn" type="primary" disabled="{{!isResetEnabled}}" bindtap="reset">Reset</button>
+  
+</view>
